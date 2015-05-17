@@ -18,3 +18,5 @@ nmap <F4> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
 "F8 to open tag list
 nmap <F8> :TlistToggle<CR>
+" Display extra whitespace
+set list listchars=tab:»·,trail:·
