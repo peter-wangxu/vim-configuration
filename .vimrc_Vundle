@@ -60,16 +60,17 @@ Plugin 'wincent/command-t'
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install autocompletion and static check for Python
-Plugin 'davidhalter/jedi'
+Plugin 'davidhalter/jedi-vim'
 " Install Tagbar (need apt-get install  exuberant-ctags)
 Plugin 'vim-scripts/Tagbar'
 " Install NerdTree
 Plugin 'scrooloose/nerdtree'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+" disable following as copy-paste error in Putty
+" filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
