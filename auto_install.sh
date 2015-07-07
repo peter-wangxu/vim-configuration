@@ -9,7 +9,7 @@ echo "If root priviledge is asked, please give."
 if [ -z $(which yum) ];then
     sudo apt-get -y install git python vim exuberant-ctags
 else
-    sudo yum -y install git python vim exuberant-ctags
+    sudo yum -y install git python vim ctags
 fi
 
 echo "Will install vim plugins via Vundle for current user:"
