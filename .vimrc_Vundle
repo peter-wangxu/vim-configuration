@@ -30,8 +30,8 @@ set matchpairs+=<:>
 " Tagbar
 let g:tagbar_width=35
 let g:tagbar_autofocus=1
-nmap <F6> :TagbarToggle<CR>
-nmap <F8> :NERDTreeToggle<CR>
+nmap <F2> :TagbarToggle<CR>
+nmap <F4> :NERDTreeToggle<CR>
 
 
 set nocompatible              " be iMproved, required
