@@ -28,7 +28,8 @@ L9
 rstacruz/sparkup
 davidhalter/jedi-vim
 vim-scripts/Tagbar
-scrooloose/nerdtree"
+scrooloose/nerdtree
+altercation/vim-colors-solarized"
 vim +PluginInstall +qall
 echo "Everythin Done!"
 

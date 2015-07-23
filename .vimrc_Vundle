@@ -65,6 +65,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-scripts/Tagbar'
 " Install NerdTree
 Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " disable following as copy-paste error in Putty
@@ -80,3 +81,7 @@ filetype plugin on
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+" Set colorscheme
+set background=dark
+colorscheme solarized
+set t_Co=256
