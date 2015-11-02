@@ -87,3 +87,9 @@ filetype plugin on
 "set t_Co=256
 " jump to last edit position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+" Get ride of Ex mode 
+nnoremap Q <nop>
+" disable auto code completion which is in bad performance
+let g:jedi#completions_enabled = 0
+let g:jedi#completions_command = "<C-N>"
+let g:jedi#show_call_signatures = "0"
