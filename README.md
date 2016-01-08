@@ -1,5 +1,10 @@
 # vim-configuration
-This is a project to store my favorite vimrc configuration, you can enable them see section __Installation Guide__ .
+This project stores my favorite vimrc configuration, you can enable them see section [Installation Guide](#Installation Guide).
+
+# Supported platforms
+* Ubuntu
+* RHEL/CentOS
+* cygwin on Windows 7(need to install `ctags` manually)
 
 # Installation Guide
 $ `git clone https://github.com/peter-wangxu/vim-configuration`<br/> 
@@ -14,4 +19,4 @@ A Vundle style rc file for VIM, the `auto_install.sh` will use this file to setu
 
 ## References
 * Vundle vim plugin manager, see [Vundle] (<https://github.com/gmarik/Vundle.vim/>)
-* see __exuberant-ctags__ `sudo apt-get install exuberant-ctags`
+* see *exuberant-ctags* `sudo apt-get install exuberant-ctags`
