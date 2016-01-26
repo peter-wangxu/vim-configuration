@@ -2,7 +2,9 @@
 #######################################################
 # This script is aimed at setting up Vundle based VIM #
 # environment in just one click                       #
-#            tested on Ubuntu 14/CentOS 6.5           #
+# Tested on:                                          #
+# Ubuntu 14/CentOS 6.5                                #
+# Linuxmint 17.3
 #######################################################
 VIM_RC_TMP=${VIM_RC_TMP:-/tmp/vim-configuration}
 echo "If root priviledge is asked, please give."
@@ -31,11 +33,4 @@ vim-scripts/Tagbar
 scrooloose/nerdtree
 altercation/vim-colors-solarized"
 vim +PluginInstall +qall
-echo "Everythin Done!"
-
-
-
-
-
-
-
+echo "Everything Done!"
