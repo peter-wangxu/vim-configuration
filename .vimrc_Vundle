@@ -69,6 +69,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ryanoasis/vim-devicons'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " disable following as copy-paste error in Putty
@@ -99,3 +100,7 @@ let g:jedi#show_call_signatures = "0"
 set laststatus=2
 let g:airline_powerline_fonts = 1
 set t_Co=256
+" close NERDTree automatically
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" let g:NERDTreeDirArrowExpandable = ''
+" let g:NERDTreeDirArrowCollapsible = 'x'
