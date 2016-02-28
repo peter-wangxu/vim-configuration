@@ -23,21 +23,21 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 rm -rf $VIM_RC_TMP
 git clone https://github.com/peter-wangxu/vim-configuration $VIM_RC_TMP
 
-# Download some special fonts for github
+# Download some special fonts for airline
 mkdir -p $USR_FONTS
 wget -P $USR_FONTS https://github.com/FortAwesome/Font-Awesome/raw/master/fonts/FontAwesome.otf
 wget -P $USR_FONTS https://github.com/jesseweed/seti-ui/raw/master/styles/_fonts/icomoon.ttf
 wget -P $USR_FONTS https://github.com/github/octicons/raw/master/octicons/octicons.ttf
 wget -P $USR_FONTS https://github.com/ryanoasis/powerline-extra-symbols/raw/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
 
-
+# Enable user fonts
 rm -rf $FONTS
 git clone https://github.com/powerline/fonts $FONTS
 $FONTS/install.sh
 
-mv -v $VIM_RC_TMP/.vimrc_Vundle ~/.vimrc
+mv -v $VIM_RC_TMP/.vimrc_python ~/.vimrc
 
-echo "Begin to install following plugins:"
+echo "Begin to install VIM plugins:"
 vim +PluginInstall +qall
-echo "Everything Done!"
-echo "[Optional]Please change your console font to powerline."
+echo -e "\033[0;32mEverything Done!\033[0m"
+echo -e "\033[0;33mOptional:\033[0mPlease change your console font to powerline."

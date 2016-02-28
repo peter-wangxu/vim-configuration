@@ -9,8 +9,8 @@ set expandtab
 set list listchars=tab:»·,trail:·
 
 " Make it obvious where 80 characters is
-"set textwidth=80
-"set colorcolumn=+1
+set textwidth=80
+set colorcolumn=+1
 
 " Numbers
 set autoindent
@@ -19,20 +19,21 @@ set number
 set numberwidth=5
 
 set matchpairs+=<:>
-" set hlsearch
+set hlsearch
 
-" Highlight current line
 "au WinLeave * set nocursorline nocursorcolumn
 "au WinEnter * set cursorline cursorcolumn
-"set cursorline cursorcolumn
+" Highlight current line
+set cursorline
+" set cursorcolumn
 " open a NERDTree automatically when vim starts up
 "autocmd vimenter * NERDTree
 
 " Tagbar
 let g:tagbar_width=35
 let g:tagbar_autofocus=1
-nmap <F2> :TagbarToggle<CR>
-nmap <F4> :NERDTreeToggle<CR>
+nmap <F4> :TagbarToggle<CR>
+nmap <F2> :NERDTreeToggle<CR>
 
 
 set nocompatible              " be iMproved, required
@@ -86,15 +87,15 @@ filetype plugin on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 " Set colorscheme
+set t_Co=256
 set background=dark
 colorscheme solarized
-set t_Co=256
 " jump to last edit position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " Get ride of Ex mode
 nnoremap Q <nop>
 " disable auto code completion which is in bad performance
-let g:jedi#completions_enabled = 0
+let g:jedi#completions_enabled = 1
 let g:jedi#completions_command = "<C-N>"
 let g:jedi#show_call_signatures = "0"
 set laststatus=2
@@ -106,3 +107,4 @@ let g:airline_theme='dark'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " let g:NERDTreeDirArrowExpandable = ''
 " let g:NERDTreeDirArrowCollapsible = 'x'
+set mouse=a
