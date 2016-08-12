@@ -32,8 +32,9 @@ set cursorline
 " Tagbar
 let g:tagbar_width=35
 let g:tagbar_autofocus=1
-nmap <F4> :TagbarToggle<CR>
 nmap <F2> :NERDTreeToggle<CR>
+nmap <F3> :CommandT<CR>
+nmap <F4> :TagbarToggle<CR>
 
 
 set nocompatible              " be iMproved, required
@@ -71,6 +72,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'wincent/command-t'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " disable following as copy-paste error in Putty
@@ -107,4 +109,6 @@ let g:airline_theme='dark'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " let g:NERDTreeDirArrowExpandable = ''
 " let g:NERDTreeDirArrowCollapsible = 'x'
-set mouse=a
+
+" set Command-T
+"set mouse=a

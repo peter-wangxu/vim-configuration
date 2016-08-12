@@ -6,7 +6,6 @@
 # Ubuntu 14/CentOS 6.5                                #
 # Linuxmint 17.3
 #######################################################
-VIM_RC_TMP=${VIM_RC_TMP:-/tmp/vim-configuration}
 FONTS=${FONTS:-/tmp/fonts}
 USR_FONTS=${USR_FONTS:-~/.local/share/fonts/}
 echo "If root priviledge is asked, please give."
@@ -16,12 +15,16 @@ else
     sudo yum -y install git python vim ctags
 fi
 
+echo "Preparing Command-T environment..."
+
+if [ -z $(which yum) ];then
+    sudo apt-get -y install vim-nox ruby ruby-dev rake make
+fi
+
 echo "Will install vim plugins via Vundle for current user:"
 mkdir -p ~/.vim/bundle
 rm -rf ~/.vim/bundle/Vundle.vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-rm -rf $VIM_RC_TMP
-git clone https://github.com/peter-wangxu/vim-configuration $VIM_RC_TMP
 
 # Download some special fonts for airline
 mkdir -p $USR_FONTS
@@ -35,9 +38,15 @@ rm -rf $FONTS
 git clone https://github.com/powerline/fonts $FONTS
 $FONTS/install.sh
 
-mv -v $VIM_RC_TMP/.vimrc_python ~/.vimrc
+cp -v ./.vimrc_python ~/.vimrc
 
 echo "Begin to install VIM plugins:"
 vim +PluginInstall +qall
+
+# Compile command-t, since vundle could not handle it
+echo "Compiling command-t"
+cd ~/.vim/bundle/command-t
+rake make
+
 echo -e "\033[0;32mEverything Done!\033[0m"
 echo -e "\033[0;33mOptional:\033[0mPlease change your console font to powerline."

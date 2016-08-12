@@ -14,24 +14,25 @@ $ Change font in Terminal or Putty or GVim to *powerline* related.
 
 # Installed plugins
 
-Plugin 'gmarik/Vundle.vim'
+* ~gmarik/Vundle.vim~
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'L9'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'davidhalter/jedi-vim'
-Plugin 'vim-scripts/Tagbar'
-Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ryanoasis/vim-devicons'
+* ~tpope/vim-fugitive~
+* ~L9'
+* ~rstacruz/sparkup~
+* ~davidhalter/jedi-vim~
+* ~vim-scripts/Tagbar~
+* ~scrooloose/nerdtree~
+* ~altercation/vim-colors-solarized~
+* ~vim-airline/vim-airline~
+* ~vim-airline/vim-airline-themes~
+* ~ryanoasis/vim-devicons~
+* ~wincent/command-t~
 
 ## .vimrc
 A basic config file from VIM
 
-## .vim_Vundle
-A Vundle style rc file for VIM, the `auto_install.sh` will use this file to setup your vim environment
+## .vim_python
+A Vundle style rc file for VIM, the `install.sh` will use this file to setup your vim environment
 
 ## References
 * Vundle vim plugin manager, see [Vundle] (<https://github.com/gmarik/Vundle.vim/>)
