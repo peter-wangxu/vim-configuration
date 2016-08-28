@@ -38,7 +38,7 @@ rm -rf $FONTS
 git clone https://github.com/powerline/fonts $FONTS
 $FONTS/install.sh
 
-cp -v ./.vimrc_python ~/.vimrc
+cp -v ./.vimrc_default ~/.vimrc
 
 echo "Begin to install VIM plugins:"
 vim +PluginInstall +qall

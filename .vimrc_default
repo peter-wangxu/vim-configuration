@@ -33,6 +33,7 @@ set cursorline
 let g:tagbar_width=35
 let g:tagbar_autofocus=1
 nmap <F2> :NERDTreeToggle<CR>
+" set Command-T
 nmap <F3> :CommandT<CR>
 nmap <F4> :TagbarToggle<CR>
 
@@ -111,5 +112,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " let g:NERDTreeDirArrowExpandable = ''
 " let g:NERDTreeDirArrowCollapsible = 'x'
 
-" set Command-T
 "set mouse=a
+" Search ctags file to parent folder recursively
+set tags=tags;/
