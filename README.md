@@ -28,9 +28,11 @@ $ Change font in Terminal or Putty or GVim to *powerline* related.
 * [vim-airline/vim-airline-themes] (<https://github.com/vim-airline/vim-airline-themes>)
 * [ryanoasis/vim-devicons] (<https://github.com/ryanoasis/vim-devicons>)
 * [wincent/command-t] (<https://github.com/wincent/command-t>)
+* [airblade/vim-gitgutter] (<https://github.com/airblade/vim-gitgutter>)
+* [tpope/vim-surround] (<https://github.com/tpope/vim-surround>)
 
 ## .vimrc
-A basic config file from VIM
+A basic configuration file from VIM
 
 ## .vim_default
 A Vundle style rc file for VIM, the `install.sh` will use this file to setup your vim environment
@@ -39,8 +41,11 @@ A Vundle style rc file for VIM, the `install.sh` will use this file to setup you
 
 ### vim-fugitive
 
+A git wrapper for vim
+
+
 ### jedi-vim
-With this plugin's support, you can jump bewteen function definition and it's
+With this plugin's support, you can jump between function definition and it's
 usage.
 * `<leader>` + `d`: Goto definition
 * `<leader>` + `n`: show all usages of this function
@@ -52,9 +57,13 @@ usage.
 * `F4`: toggle tagbar
 
 ### nerdtree
+A file explorer for vim.
+
 * `F2`: toggle nerdtree
 
 ### command-t
+Fast file finder for vim.
+
 * `F3`: Open project file finder
 * `<leader>` + `b`: Open buffer finder
 
@@ -63,6 +72,16 @@ To use this, run `ctags -R` on the root folder of your project.
 
 * `Ctrl` + `]`: Goto definition
 * `Ctrl` + `t`: Back to previous usage
+
+### airblade/vim-gitgutter
+A plugin to show `git diff` in vim.
+
+### vim-surround
+Add `surroundings` like quotations, brackets, parentheses in pairs.
+
+* `cs'"`: change `'` to `"`.
+* `ysiw"`: add `"` for word under cursor.
+* `ds"`: delete `"` for word under cursor.
 
 ## References
 
