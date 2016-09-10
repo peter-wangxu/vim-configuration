@@ -2,6 +2,9 @@
 This project provides a handy vim configuration, you can enable them in just one
 click. See section [Installation Guide](#Installation Guide) for how.
 Generally, this configuration fits best for _Python_ and partial for _C_.
+# Screenshot
+
+![screenshot](./images/vim-snap1.png)
 
 # Supported platforms
 * Ubuntu
@@ -30,6 +33,7 @@ $ Change font in Terminal or Putty or GVim to *powerline* related.
 * [wincent/command-t] (<https://github.com/wincent/command-t>)
 * [airblade/vim-gitgutter] (<https://github.com/airblade/vim-gitgutter>)
 * [tpope/vim-surround] (<https://github.com/tpope/vim-surround>)
+* [scrooloose/syntastic] (<https://github.com/scrooloose/syntastic>)
 
 ## .vimrc
 A basic configuration file from VIM
@@ -82,6 +86,20 @@ Add `surroundings` like quotations, brackets, parentheses in pairs.
 * `cs'"`: change `'` to `"`.
 * `ysiw"`: add `"` for word under cursor.
 * `ds"`: delete `"` for word under cursor.
+
+Note: above `'` or `"` can be any character like `}`, `]`, `)`.
+
+### scrooloose/syntastic
+Syntax check(`pep8` or `pylint`) for Python.
+To enable this please manually install `sudo pip install flake8`,
+if you want more detailed check, install `sudo pip install pylint`
+(while I disable pylint as it's providing awful error checkout for me)
+
+* Syntax check when write using `w`.
+* `F7`: jump to previous error.
+* `F8`: jump to next error.
+* `:lopen`: open full list of errors.
+* `:lclose`: close full list.
 
 ## References
 

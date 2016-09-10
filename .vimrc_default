@@ -36,6 +36,8 @@ nmap <F2> :NERDTreeToggle<CR>
 " set Command-T
 nmap <F3> :CommandT<CR>
 nmap <F4> :TagbarToggle<CR>
+nmap <F7> :lprevious<CR>
+nmap <F8> :lnext<CR>
 
 
 set nocompatible              " be iMproved, required
@@ -76,6 +78,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'wincent/command-t'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " disable following as copy-paste error in Putty
@@ -116,3 +119,13 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "set mouse=a
 " Search ctags file to parent folder recursively
 set tags=tags;/
+
+" for python syntax check
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
