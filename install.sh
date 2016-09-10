@@ -28,10 +28,18 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Download some special fonts for airline
 mkdir -p $USR_FONTS
-wget -P $USR_FONTS https://github.com/FortAwesome/Font-Awesome/raw/master/fonts/FontAwesome.otf
-wget -P $USR_FONTS https://github.com/jesseweed/seti-ui/raw/master/styles/_fonts/icomoon.ttf
-wget -P $USR_FONTS https://github.com/github/octicons/raw/master/octicons/octicons.ttf
-wget -P $USR_FONTS https://github.com/ryanoasis/powerline-extra-symbols/raw/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
+wget -P $USR_FONTS \
+https://github.com/FortAwesome/Font-Awesome/raw/master/fonts/FontAwesome.otf \
+-O $USR_FONTS/FontAwesome.otf
+wget -P $USR_FONTS \
+https://github.com/jesseweed/seti-ui/raw/master/styles/_fonts/icomoon.ttf \
+-O $USR_FONTS/icomoon.ttf
+wget -P $USR_FONTS \
+https://github.com/github/octicons/raw/master/octicons/octicons.ttf \
+-O $USR_FONTS/octicons.ttf
+wget -P $USR_FONTS \
+https://github.com/ryanoasis/powerline-extra-symbols/raw/master/patched-fonts/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf \
+-O $USR_FONTS/DroidSansMonoForPowerlinePlusNerdFileTypesMono.otf
 
 # Enable user fonts
 rm -rf $FONTS
