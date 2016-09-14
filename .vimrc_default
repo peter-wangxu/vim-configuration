@@ -79,6 +79,9 @@ Plugin 'wincent/command-t'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
+" puppet highlight
+Plugin 'rodjek/vim-puppet'
+Plugin 'tomasr/molokai'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " disable following as copy-paste error in Putty
@@ -97,7 +100,7 @@ filetype plugin on
 " Set colorscheme
 set t_Co=256
 set background=dark
-colorscheme desert
+colorscheme default
 " jump to last edit position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " Get ride of Ex mode

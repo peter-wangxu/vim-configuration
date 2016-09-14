@@ -3,7 +3,7 @@
 # This script is aimed at setting up Vundle based VIM #
 # environment in just one click                       #
 # Tested on:                                          #
-# Ubuntu 14/CentOS 6.5                                #
+# Ubuntu 14.04/Ubuntu 16.04                                #
 # Linuxmint 17.3
 #######################################################
 FONTS=${FONTS:-/tmp/fonts}
@@ -19,6 +19,11 @@ echo "Preparing Command-T environment..."
 
 if [ -z $(which yum) ];then
     sudo apt-get -y install vim-nox ruby ruby-dev rake make
+fi
+
+echo "Preparing puppet development environment..."
+if [ -z $(which yum) ];then
+    sudo apt-get -y install puppet-lint
 fi
 
 echo "Will install vim plugins via Vundle for current user:"

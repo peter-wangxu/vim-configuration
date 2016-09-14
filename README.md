@@ -7,9 +7,7 @@ Generally, this configuration fits best for _Python_ and partial for _C_.
 ![screenshot](./images/vim-snap1.png)
 
 # Supported platforms
-* Ubuntu
-* RHEL/CentOS
-* cygwin on Windows 7(need to install `ctags` manually)
+* Ubuntu/Mint/Debian
 
 # Installation Guide
 $ `git clone https://github.com/peter-wangxu/vim-configuration`<br/> 
