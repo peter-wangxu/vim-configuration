@@ -82,6 +82,7 @@ Plugin 'scrooloose/syntastic'
 " puppet highlight
 Plugin 'rodjek/vim-puppet'
 Plugin 'tomasr/molokai'
+Plugin 'godlygeek/tabular'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " disable following as copy-paste error in Putty

@@ -32,6 +32,7 @@ $ Change font in Terminal or Putty or GVim to *powerline* related.
 * [airblade/vim-gitgutter] (<https://github.com/airblade/vim-gitgutter>)
 * [tpope/vim-surround] (<https://github.com/tpope/vim-surround>)
 * [scrooloose/syntastic] (<https://github.com/scrooloose/syntastic>)
+* [godlygeek/tabular] (<https://github.com/godlygeek/tabular>)
 
 ## .vimrc
 A basic configuration file from VIM
@@ -98,6 +99,16 @@ if you want more detailed check, install `sudo pip install pylint`
 * `F8`: jump to next error.
 * `:lopen`: open full list of errors.
 * `:lclose`: close full list.
+
+### tabular
+Text alignment for multiple lines.
+To align text, you need to select text in visual mode and use `Tab /:`.
+`:` can be any character linke `,`, `|`, `=`.
+
+* Select text and `:Tab /:` to align selected lines.
+
+See more tips [here]
+(<http://vimcasts.org/episodes/aligning-text-with-tabular-vim/>)
 
 ## References
 
