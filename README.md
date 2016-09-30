@@ -103,7 +103,7 @@ if you want more detailed check, install `sudo pip install pylint`
 ### tabular
 Text alignment for multiple lines.
 To align text, you need to select text in visual mode and use `Tab /:`.
-`:` can be any character linke `,`, `|`, `=`.
+`:` can be any character like `,`, `|`, `=`.
 
 * Select text and `:Tab /:` to align selected lines.
 
