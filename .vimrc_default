@@ -38,7 +38,7 @@ nmap <F3> :CommandT<CR>
 nmap <F4> :TagbarToggle<CR>
 nmap <F7> :lprevious<CR>
 nmap <F8> :lnext<CR>
-
+set pastetoggle=<F9>
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -83,6 +83,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'rodjek/vim-puppet'
 Plugin 'tomasr/molokai'
 Plugin 'godlygeek/tabular'
+Plugin 'hdima/python-syntax'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " disable following as copy-paste error in Putty
@@ -101,7 +102,7 @@ filetype plugin on
 " Set colorscheme
 set t_Co=256
 set background=dark
-colorscheme default
+colorscheme molokai
 " jump to last edit position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " Get ride of Ex mode
@@ -133,3 +134,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+
+let python_highlight_all = 1
+"Set vim bracket highlighting colors
+hi MatchParen cterm=underline ctermbg=none ctermfg=magenta
