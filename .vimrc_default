@@ -6,7 +6,7 @@ set shiftround
 set expandtab
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·
+set list listchars=tab:»·,trail:␣
 
 " Make it obvious where 80 characters is
 set textwidth=80
@@ -84,6 +84,7 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'tomasr/molokai'
 Plugin 'godlygeek/tabular'
 Plugin 'hdima/python-syntax'
+Plugin 'fatih/vim-go'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " disable following as copy-paste error in Putty
@@ -113,7 +114,7 @@ let g:jedi#completions_command = "<C-N>"
 let g:jedi#show_call_signatures = "0"
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='dark'
 " close NERDTree automatically
@@ -136,5 +137,11 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 let python_highlight_all = 1
-"Set vim bracket highlighting colors
+" Set vim bracket highlighting colors
 hi MatchParen cterm=underline ctermbg=none ctermfg=magenta
+" Set git commit message format
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" Tweak the performance of tagbar( only search tagbar for following file type)
+autocmd FileType go,python,perl,java,c,cpp,bash,java let g:airline#extensions#tabline#enabled = 1
+
