@@ -75,19 +75,24 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ryanoasis/vim-devicons'
+"Plugin 'ryanoasis/vim-devicons'
 Plugin 'wincent/command-t'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 " puppet highlight
 Plugin 'rodjek/vim-puppet'
+" Ruby highlight
+Plugin 'vim-ruby/vim-ruby'
+
 Plugin 'tomasr/molokai'
 Plugin 'godlygeek/tabular'
 Plugin 'hdima/python-syntax'
 Plugin 'fatih/vim-go'
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'Raimondi/delimitMate'
+Plugin 'mileszs/ack.vim'
+Plugin 'gcmt/wildfire.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " disable following as copy-paste error in Putty
@@ -114,13 +119,29 @@ nnoremap Q <nop>
 " disable auto code completion which is in bad performance
 let g:jedi#completions_enabled = 1
 let g:jedi#completions_command = "<C-N>"
-let g:jedi#show_call_signatures = "2"
+let g:jedi#show_call_signatures = "0"
 let g:jedi#auto_close_doc = 1  " close preview window after completion
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='dark'
+" Enabled buffer display and switch
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>- <Plug>AirlineSelectPrevTab
+nmap <leader>+ <Plug>AirlineSelectNextTab
+
 " close NERDTree automatically
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " let g:NERDTreeDirArrowExpandable = ''
@@ -142,12 +163,12 @@ let g:syntastic_check_on_wq = 0
 
 let python_highlight_all = 1
 " Set vim bracket highlighting colors
-hi MatchParen cterm=underline ctermbg=none ctermfg=magenta
+hi MatchParen cterm=underline ctermfg=magenta ctermbg=none
 " Set git commit message format
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Tweak the performance of tagbar( only search tagbar for following file type)
-autocmd FileType go,python,perl,java,c,cpp,bash,java let g:airline#extensions#tabline#enabled = 1
+autocmd FileType go,python,perl,java,c,cpp,bash,java,ruby let g:airline#extensions#tabline#enabled = 1
 
 
 let g:neocomplete#enable_at_startup = 1
@@ -157,3 +178,19 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <F10> :GoRun %:p<CR>
+au FileType yaml set tabstop=2
+au FileType yaml set shiftwidth=2
+
+" Ruby rules
+
+au FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2
+
+" Ruby rules end
+" for ack.vim
+let g:ack_lhandler = "botright lopen 30"
+" wildfire - quick pair
+" enter 3<SPACE> to select 3 layer of pairs
+map <SPACE> <Plug>(wildfire-fuel)
+vmap <S-SPACE> <Plug>(wildfire-water)
+let g:wildfire_objects=["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
+
