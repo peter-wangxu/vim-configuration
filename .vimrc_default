@@ -1,3 +1,6 @@
+" set display language
+let $LANG = 'en'  "set message language
+
 " Softtabs, 2 spaces
 set encoding=utf8
 set tabstop=4
@@ -20,7 +23,10 @@ set numberwidth=5
 
 set matchpairs+=<:>
 set hlsearch
-
+" vim 8: syntax is off by default
+syntax on
+" macOS: delete key can work as linux
+set backspace=2
 "au WinLeave * set nocursorline nocursorcolumn
 "au WinEnter * set cursorline cursorcolumn
 " Highlight current line
@@ -93,6 +99,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mileszs/ack.vim'
 Plugin 'gcmt/wildfire.vim'
+Plugin 'scrooloose/nerdcommenter'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " disable following as copy-paste error in Putty
@@ -122,7 +129,7 @@ let g:jedi#completions_command = "<C-N>"
 let g:jedi#show_call_signatures = "0"
 let g:jedi#auto_close_doc = 1  " close preview window after completion
 set laststatus=2
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='dark'
@@ -193,4 +200,7 @@ let g:ack_lhandler = "botright lopen 30"
 map <SPACE> <Plug>(wildfire-fuel)
 vmap <S-SPACE> <Plug>(wildfire-water)
 let g:wildfire_objects=["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
+" support copy to system clipboard
+vmap <C-x> :!pbcopy<CR>
 
+vmap <C-c> :w !pbcopy<CR><CR>

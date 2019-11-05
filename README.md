@@ -33,6 +33,7 @@ $ Change font in Terminal or Putty or GVim to *powerline* related.
 * [tpope/vim-surround] (<https://github.com/tpope/vim-surround>)
 * [scrooloose/syntastic] (<https://github.com/scrooloose/syntastic>)
 * [godlygeek/tabular] (<https://github.com/godlygeek/tabular>)
+* [scrooloose/nerdcommenter] (<https://github.com/scrooloose/nerdcommenter>)
 
 ## .vimrc
 A basic configuration file from VIM
@@ -106,6 +107,10 @@ To align text, you need to select text in visual mode and use `Tab /:`.
 `:` can be any character like `,`, `|`, `=`.
 
 * Select text and `:Tab /:` to align selected lines.
+
+### nerdcommenter
+
+* `<leader>` + `cc`: Comment out the current line or text selected in visual mode.
 
 See more tips [here]
 (<http://vimcasts.org/episodes/aligning-text-with-tabular-vim/>)
